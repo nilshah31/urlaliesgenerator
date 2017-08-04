@@ -1,17 +1,19 @@
-default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  host: localhost
-
 development:
-  <<: *default
-  database: urlgen_dev
-
+  adapter: postgresql
+  database: url_generator
+  pool: 5
+  timeout: 5000
+  username: postgres
 test:
-  <<: *default
-  database: urlgen_test
+  adapter: postgresql
+  database: url_generator
+  pool: 5
+  timeout: 5000
+  username: postgres
 
 production:
-  <<: *default
-  database: urlgen_prod
+  adapter: postgresql
+  database: url_generator
+  pool: 5
+  timeout: 5000
+  username: postgres

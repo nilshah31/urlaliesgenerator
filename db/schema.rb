@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170803064110) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "url_generators", force: :cascade do |t|
     t.string   "url"
     t.string   "key"
