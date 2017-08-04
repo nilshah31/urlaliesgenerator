@@ -2,7 +2,6 @@
   <% if url_generator.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(url_generator.errors.count, "error") %> prohibited this url_generator from being saved:</h2>
-
       <ul>
       <% url_generator.errors.full_messages.each do |message| %>
         <li><%= message %></li>
