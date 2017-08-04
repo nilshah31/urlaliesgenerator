@@ -1,0 +1,22 @@
+<%= form_for(url_generator) do |f| %>
+  <% if url_generator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(url_generator.errors.count, "error") %> prohibited this url_generator from being saved:</h2>
+
+      <ul>
+      <% url_generator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :url, 'URL' %>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Generate URL" , :class => 'btn btn-primary' %>
+  </div>
+<% end %>

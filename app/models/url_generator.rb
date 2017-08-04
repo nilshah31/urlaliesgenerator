@@ -1,0 +1,2 @@
+class UrlGenerator < ApplicationRecord
+end

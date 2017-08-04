@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<center>
+<br />
+<h1>URL Alieses Generator (Short length URL)</h1>
+<%= link_to 'Generate New Alieses', new_url_generator_path, class: "btn btn-info" %>
+</center>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>Tiny URL</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @url_generators.each do |url_generator| %>
+      <tr>
+        <td><%= url_generator.url %></td>
+        <td>http://www.localhost:3000/<%= url_generator.key %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
